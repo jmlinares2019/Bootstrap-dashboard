@@ -1,3 +1,29 @@
 div, header, a, ul, li{
     border: 1px solid;
 }
+
+.row{
+    border: 1px solid blue;
+}
+
+.col{
+    border: 1px solid red;
+}
+
+.bg-red{
+    background-color: red;
+    color: white;
+}
+
+.bg-grey{
+    background-color: lightgrey;
+}
+
+.break{
+    display: block;
+}
+
+/* --- For Dropdowns to force next down 
+.show{
+    margin-bottom: 100px;
+} ---*/
