@@ -1,4 +1,4 @@
-/*div, header, ul, li{
+div, header, ul, li{
     border: 1px solid;
 }
 
@@ -8,10 +8,6 @@
 
 .col{
     border: 1px solid red;
-}*/
-
-.card-icon{
-    color: aliceblue;
 }
 
 *{
@@ -70,12 +66,89 @@ a{
     font-size: 1.2em;
 }
 
-main{
+#top-tabs-navbar{
+    padding-left: 10px !important;
+}
+
+.top-tab{
     background-color: #F6F5FA;
+    border-radius: 5px;
+}
+
+.top-tab:hover{
+    background-color: #FF3A1F;
+}
+
+.top-tab:active{
+    border-bottom: 5px solid blue;
+}
+
+.top-tab:visited{
+    border-bottom: 5px solid blue;
+}
+
+.top-tab.active{
+    border-bottom: 5px solid blue;
+}
+
+.top-tab a{
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 25px;
+    position: relative;
+}
+
+.top-tab:hover a{
+    color: white !important;
+}
+
+.top-tab a::before{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.top-tab.informe a::before{
+    content: url(../img/file.svg);
+}
+
+.top-tab.carbono a::before{
+    content: url(../img/leaf.svg);
+}
+
+.top-tab.plan a::before{
+    content: url(../img/user-light.svg);
+}
+
+.top-tab.material a::before{
+    content: url(../img/book-alt.svg);
+    top: 5px !important;
+}
+
+.top-tab.informe:hover a::before{
+    content: url(../img/file-negative.svg);
+}
+
+.top-tab.carbono:hover a::before{
+    content: url(../img/leaf-negative.svg);
+}
+
+.top-tab.plan:hover a::before{
+    content: url(../img/user-light-negative.svg);
+}
+
+.top-tab.material:hover a::before{
+    content: url(../img/book-alt-negative.svg);
 }
 
 .cards-section{
     padding: 10px;
+    background-color: #F6F5FA;
 }
 
 .cards-section .col{
@@ -83,13 +156,12 @@ main{
 }
 
 .cards-group{
-    margin: 10px !important;
+    margin: 10px 10px 10px 0!important;
 }
 
 .card{
     padding: 20px;
     margin: 10px;
-/*    min-width: 250px;*/
 }
 
 .card-body{
@@ -146,6 +218,13 @@ main{
     .sygris-navbar{
         height: 40px;
     }
+    
+    .col-md-2.top-tab{
+        max-width: 150px;
+        height: 60px;
+        margin: 0 10px;
+    }
+    
 }
 
 /*------ Mobile + tablet portrait ------ */
