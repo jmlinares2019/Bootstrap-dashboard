@@ -1,5 +1,4 @@
-/*
-div, header, ul, li{
+/*div, header, ul, li{
     border: 1px solid;
 }
 
@@ -9,8 +8,11 @@ div, header, ul, li{
 
 .col{
     border: 1px solid red;
+}*/
+
+.card-icon{
+    color: aliceblue;
 }
-*/
 
 *{
     box-sizing: border-box;
@@ -32,6 +34,10 @@ a{
 /*.main-content{
     height: 100vh;
 }*/
+
+#content{
+    max-width: 1366px;
+}
 
 .sygris-navbar{
     background-color: #DA1B00; 
@@ -69,29 +75,50 @@ main{
 }
 
 .cards-section{
-    padding: 20px;
+    padding: 10px;
 }
 
 .cards-section .col{
     padding: 0;
 }
 
+.cards-group{
+    margin: 10px !important;
+}
+
 .card{
     padding: 20px;
     margin: 10px;
-    min-width: 250px;
+/*    min-width: 250px;*/
 }
 
 .card-body{
     padding: 0;
 }
 
+.cards-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-icon{
+    fill: white;
+    margin-right: 10px;
+    background-color: #FF3A1F;
+    padding: 7.5px;
+    border-radius: 2.5px;
+}
+
 .card-title{
     font-size: 1em !important;
     font-weight: 600;
+    margin-bottom: 0 !important;
+    margin-block-end: 0 !important;
 }
 
-.card-title::before{
+/* ---- discarded solution ---*/
+
+/*.card-title::before{
     content: url(../img/file-alt.svg);
     display: inline-block;
     width: 30px;
@@ -99,16 +126,65 @@ main{
     margin-right: 1em;
     background-color: red;
     border-radius: 5px;
-}
+}*/
 
 .card-text{
-    font-size: .8em;
+    font-size: .75em;
 }
 
 /*------- Responsive ------- */
+
+/*------ Only mobile -------*/
+
+@media only screen and (max-width: 575px){
+    
+}
+
+/*----- All but mobile -----*/
 
 @media only screen and (min-width: 576px){
     .sygris-navbar{
         height: 40px;
     }
+}
+
+/*------ Mobile + tablet portrait ------ */
+
+@media only screen and (max-width: 767px){
+    
+}
+
+@media only screen and (max-width: 991px){
+    
+}
+
+/*@media only screen and (max-width: 1024px){
+    
+}*/
+
+/*----- Mobile + small tablet landscape ----- */
+
+@media only screen and (max-width: 1199px){
+    
+}
+
+/*-------- Small tablet landscape ------- */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .card{
+        min-height: 205px;
+    }
+}
+
+/*--------- All (and only) tablets ------ */
+
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+    
+}
+
+
+/*-- Only desktop (and big tablets landscape) --*/
+
+@media only screen and (min-width: 1200px){
+    
 }
