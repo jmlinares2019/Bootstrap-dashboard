@@ -1,4 +1,5 @@
-div, header, a, ul, li{
+/*
+div, header, ul, li{
     border: 1px solid;
 }
 
@@ -9,21 +10,105 @@ div, header, a, ul, li{
 .col{
     border: 1px solid red;
 }
+*/
 
-.bg-red{
-    background-color: red;
-    color: white;
+*{
+    box-sizing: border-box;
 }
 
-.bg-grey{
-    background-color: lightgrey;
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+}
+
+a{
+    color: inherit !important;
 }
 
 .break{
     display: block;
 }
 
-/* --- For Dropdowns to force next down 
-.show{
-    margin-bottom: 100px;
-} ---*/
+/*.main-content{
+    height: 100vh;
+}*/
+
+.sygris-navbar{
+    background-color: #DA1B00; 
+}
+
+.sygris-navbar img{
+    width: 100px;
+    border-right: 2px solid #fff;
+}
+
+.sidebar-left{
+    color: #ffffff;
+    background-image: url(../img/fondo-sidebar-left.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: contain;
+    background-color: #FF3A1F;
+}
+
+.main-title{
+    margin-top: 80px;
+}
+
+.product-name{
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.left-sidebar-options{
+    font-size: 1.2em;
+}
+
+main{
+    background-color: #F6F5FA;
+}
+
+.cards-section{
+    padding: 20px;
+}
+
+.cards-section .col{
+    padding: 0;
+}
+
+.card{
+    padding: 20px;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-title{
+    font-size: 1em !important;
+    font-weight: 600;
+}
+
+.card-title::before{
+    content: url(../img/file-alt.svg);
+    display: inline-block;
+    width: 30px;
+    padding: 5px 7.5px;
+    margin-right: 1em;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.card-text{
+    font-size: .8em;
+}
+
+/*------- Responsive ------- */
+
+@media only screen and (min-width: 576px){
+    .sygris-navbar{
+        height: 40px;
+    }
+}

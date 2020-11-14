@@ -10,7 +10,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="img/favicon.png">
-
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -20,8 +22,10 @@
 
 <body>
  
-   <header class="navbar navbar-expand flex-column flex-sm-row">
-       <a class="navbar-brand mr-auto">Sygris</a>
+   <header class="navbar navbar-expand flex-column flex-sm-row sygris-navbar">
+       <a class="navbar-brand mr-auto"><span class="d-none">Sygris</span>
+           <img class="mx-4 pr-4" src="img/logo_sygris_blanco.svg">
+       </a>
        <ul class="navbar-nav ml-auto">
            <li>Item 1</li>
            <li>Item 2</li>
@@ -32,23 +36,23 @@
    
    <div class="container-fluid">
       
-      <div class="row flex-column flex-sm-row">
-          <div class="col-sm-4 col-lg-2 bg-red">
+      <div class="row flex-column flex-sm-row main-content">
+          <div class="col-sm-4 col-lg-2 sidebar-left">
               <div class="row flex-column">
-                  <div class="col">
-                      <p>Bienvenido/a a:<span class="break">Sygris Sostenibilidad SCINF</span></p>
+                  <div class="col main-title">
+                      <p>Bienvenido/a a:<span class="break product-name">Sygris Sostenibilidad SCINF</span></p>
                   </div>
-                  <div class="col">
-                      <a href="">Negocio Digital</a>
+                  <div class="col mt-4">
+                      <a class="left-sidebar-options" href="#">Negocio Digital</a>
                   </div>
-                  <div class="col">
-                      <a href="">Métodos Operativos</a>
+                  <div class="col mt-4">
+                      <a class="left-sidebar-options" href="#">Métodos Operativos</a>
                   </div>
-                  <div class="col">
-                      <a href="">Modelos Transversales</a>
+                  <div class="col mt-4">
+                      <a class="left-sidebar-options" href="#">Modelos Transversales</a>
                   </div>
-                  <div class="col">
-                      <a href="">Modelos de Autoservicio</a>
+                  <div class="col mt-4">
+                      <a class="left-sidebar-options" href="#">Modelos de Autoservicio</a>
                   </div>
               </div>
           </div>
@@ -69,7 +73,7 @@
                   
               </nav>
               <div class="row flex-column flex-lg-row">
-                  <div class="col col-lg-9 bg-grey">
+                  <div class="col col-lg-9 cards-section">
                      <div class="row">
                         <div class="col col-sm-6 col-lg-4">
                             <div class="card">
