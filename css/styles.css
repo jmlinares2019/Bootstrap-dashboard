@@ -28,17 +28,36 @@ a{
     display: block;
 }
 
-#content{
-    max-width: 1366px;
-}
+/*------ Navbar ------ */
 
 .sygris-navbar{
-    background-color: #DA1B00; 
+    background-color: #DA1B00;
 }
 
 .sygris-navbar img{
     width: 100px;
     border-right: 2px solid #fff;
+}
+
+.sygris-navbar a:not(.user-initials){
+    padding: 0 25px;
+    color: #ffffff !important;
+}
+
+.sygris-navbar a.user-initials{
+    color: darkslategray !important;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.sygris-navbar a.language{
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+#content{
+    max-width: 1366px;
 }
 
 .sidebar-left{
@@ -196,9 +215,12 @@ a{
 
 
 /* ---- Collapsable aside --*/
+    
+aside .row{
+    margin-right: 2em;
+}
 
 .aside-collapse{
-    max-width: 250px;
     margin: 25px 0 0 25px;
     background-color: #F6F5FA;
     border-radius: 5px;
@@ -215,6 +237,7 @@ a{
     padding-left: 25px;
     font-size: .8em;
     font-weight: 600;
+    text-align: left;
 }
 
 .collapse-arrow{
@@ -254,7 +277,6 @@ a{
 }
 
 .collapse-item a{
-    padding-left: 35px;
     font-size: .8em;
 }
 
@@ -278,6 +300,28 @@ a{
 /*------ Only mobile -------*/
 
 @media only screen and (max-width: 575px){
+    
+    /*--------- Navbar---------*/
+    
+    .navbar-brand{
+        margin: auto;
+    }
+    
+    .navbar-brand img{
+        border-right: none;
+    }
+    
+    .navbar-nav{
+        margin: 20px auto;
+    }
+    
+    /*----- Left sidebar ------ */ 
+    
+    .sidebar-left{
+        background-size:cover;
+        background-position: inherit;
+        padding-bottom: 40px;
+    }
     
     #top-tabs-navbar{
         margin-right: 1rem;
@@ -307,17 +351,38 @@ a{
         max-width: 150px;
     }
     
+    /*---- Collapsable aside ---- */
+    
+
 }
 
 /*------ Mobile + tablet portrait ------ */
 
 @media only screen and (max-width: 767px){
     
+    /*----- Left sidebar -----*/
+    
+    .product-name{
+        font-size: 1.8em;
+    }
+    
 }
 
 @media only screen and (max-width: 991px){
+    
+    #top-tabs-navbar{
+        padding-top: 20px;
+    }
+    
     .top-tab{
         margin-bottom: 20px !important;
+    }
+    
+    /*----- Collapsable aside ----- */
+    
+    aside{
+        padding-left: 25px !important;
+        margin-bottom: 40px;
     }
 }
 
@@ -330,12 +395,22 @@ a{
 /*-------- Small tablet landscape ------- */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){
+    
     .card{
         min-height: 205px;
     }
+    
+    
 }
 
 /*--------- All (and only) tablets ------ */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    
+    .aside-collapse{
+        max-width: 40%;
+    }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1199px){
     
@@ -348,6 +423,14 @@ a{
     
 }
 
+@media only screen and (min-width: 992px){
+    
+    .aside-collapse{
+        max-width: 250px;
+    }
+    
+}
+
 
 /*-- Only desktop (and big tablets landscape) --*/
 
@@ -356,6 +439,18 @@ a{
     .main-content,
     .cards-section{
         height: 100vh;
+    }
+    
+    /*----- Cards section ----- */
+    
+    .card{
+        min-height: 175px;
+    }
+    
+    /*----- Collapsable aside ----- */
+    
+    .collapse-item a{
+        padding-left: 35px;
     }
     
 }
