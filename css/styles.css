@@ -1,4 +1,4 @@
-div, header, a, ul, li{
+/*div, header, ul, li, a{
     border: 1px solid;
 }
 
@@ -8,22 +8,354 @@ div, header, a, ul, li{
 
 .col{
     border: 1px solid red;
+}*/
+
+*{
+    box-sizing: border-box;
 }
 
-.bg-red{
-    background-color: red;
-    color: white;
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
 }
 
-.bg-grey{
-    background-color: lightgrey;
+a{
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
 .break{
     display: block;
 }
 
-/* --- For Dropdowns to force next down 
-.show{
-    margin-bottom: 100px;
-} ---*/
+#content{
+    max-width: 1366px;
+}
+
+.sygris-navbar{
+    background-color: #DA1B00; 
+}
+
+.sygris-navbar img{
+    width: 100px;
+    border-right: 2px solid #fff;
+}
+
+.sidebar-left{
+    color: #ffffff;
+    background-image: url(../img/fondo-sidebar-left.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: contain;
+    background-color: #FF3A1F;
+}
+
+.main-title{
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.product-name{
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.sidebar-left-options{
+    font-size: 1.2em;
+}
+
+.sidebar-col:hover{
+    font-size: 1.4em;
+    background-color: #FE533B;
+}
+
+.top-tab{
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #F6F5FA;
+    border-radius: 5px;
+}
+
+.top-tab:hover{
+    background-color: #FF3A1F;
+}
+
+/*.top-tab:active{
+    border-bottom: 5px solid blue;
+}
+
+.top-tab:visited{
+    border-bottom: 5px solid blue;
+}
+
+.top-tab.active{
+    border-bottom: 5px solid blue;
+}*/
+
+.top-tab a{
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 25px;
+    position: relative;
+}
+
+.top-tab:hover a{
+    color: white !important;
+}
+
+.top-tab a::before{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.top-tab.informe a::before{
+    content: url(../img/file.svg);
+}
+
+.top-tab.carbono a::before{
+    content: url(../img/leaf.svg);
+}
+
+.top-tab.plan a::before{
+    content: url(../img/user-light.svg);
+}
+
+.top-tab.material a::before{
+    content: url(../img/book-alt.svg);
+    top: 5px !important;
+}
+
+.top-tab.informe:hover a::before{
+    content: url(../img/file-negative.svg);
+}
+
+.top-tab.carbono:hover a::before{
+    content: url(../img/leaf-negative.svg);
+}
+
+.top-tab.plan:hover a::before{
+    content: url(../img/user-light-negative.svg);
+}
+
+.top-tab.material:hover a::before{
+    content: url(../img/book-alt-negative.svg);
+}
+
+.cards-section{
+    padding: 10px;
+    background-color: #F6F5FA;
+}
+
+.cards-section .col{
+    padding: 0;
+}
+
+.cards-group{
+    margin: 10px 10px 10px 0!important;
+}
+
+.card{
+    padding: 20px;
+    margin: 10px;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.cards-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-icon{
+    fill: white;
+    margin-right: 10px;
+    background-color: #FF3A1F;
+    padding: 7.5px;
+    border-radius: 2.5px;
+}
+
+.card-title{
+    font-size: 1em !important;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+    margin-block-end: 0 !important;
+}
+
+.card-text{
+    font-size: .75em;
+}
+
+
+/* ---- Collapsable aside --*/
+
+.aside-collapse{
+    max-width: 250px;
+    margin: 25px 0 0 25px;
+    background-color: #F6F5FA;
+    border-radius: 5px;
+    position: relative;
+}
+
+.collapse-btn{
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.collapse-btn a{
+    padding-left: 25px;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+.collapse-arrow{
+    width: 7px;
+}
+
+.collapse-btn a::before{
+    content: url(../img/icon-separador.svg);
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.collapse-arrow.down{
+    animation-name: arrowdown;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+    @keyframes arrowdown{
+        from{
+            transform: rotate(0);
+        }
+        to{
+            transform: rotate(90deg);
+        }
+    }
+
+.collapse-pane{
+    padding: 10px 0;
+}
+
+.collapse-item{
+    padding: 10px 0;
+    position: relative;
+}
+
+.collapse-item a{
+    padding-left: 35px;
+    font-size: .8em;
+}
+
+.collapse-item::after{
+    /*-- static data --*/
+    content: "2";
+    display: inline;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 20px;
+    font-size: .8em;
+    text-align: center;
+    color: #ffffff;
+    background-color: #FE533B;
+    border-radius: 5px;
+}
+
+/*------- Responsive ------- */
+
+/*------ Only mobile -------*/
+
+@media only screen and (max-width: 575px){
+    
+    #top-tabs-navbar{
+        margin-right: 1rem;
+    }
+    
+    .top-tab{
+        margin-top: 20px !important;
+        justify-content: center;
+    }
+    
+}
+
+/*----- All but mobile -----*/
+
+@media only screen and (min-width: 576px){
+    
+    .sygris-navbar{
+        height: 40px;
+    }
+    
+    
+    #top-tabs-navbar{
+        padding-left: 10px !important;
+    }
+    
+    .col-md-2.top-tab{
+        max-width: 150px;
+    }
+    
+}
+
+/*------ Mobile + tablet portrait ------ */
+
+@media only screen and (max-width: 767px){
+    
+}
+
+@media only screen and (max-width: 991px){
+    .top-tab{
+        margin-bottom: 20px !important;
+    }
+}
+
+/*----- Mobile + small tablet landscape ----- */
+
+@media only screen and (max-width: 1199px){
+    
+}
+
+/*-------- Small tablet landscape ------- */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .card{
+        min-height: 205px;
+    }
+}
+
+/*--------- All (and only) tablets ------ */
+
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+    
+}
+
+/*--------- Tablet + desktop --------*/
+
+@media only screen and (min-width: 768px){
+    
+    
+}
+
+
+/*-- Only desktop (and big tablets landscape) --*/
+
+@media only screen and (min-width: 1200px){
+    
+    .main-content,
+    .cards-section{
+        height: 100vh;
+    }
+    
+}
