@@ -1,4 +1,4 @@
-/*div, header, ul, li{
+/*div, header, ul, li, a{
     border: 1px solid;
 }
 
@@ -27,10 +27,6 @@ a{
 .break{
     display: block;
 }
-
-/*.main-content{
-    height: 100vh;
-}*/
 
 #content{
     max-width: 1366px;
@@ -67,8 +63,6 @@ a{
 .sidebar-left-options{
     font-size: 1.2em;
 }
-
-
 
 .sidebar-col:hover{
     font-size: 1.4em;
@@ -196,20 +190,87 @@ a{
     margin-block-end: 0 !important;
 }
 
-/* ---- discarded solution ---*/
-
-/*.card-title::before{
-    content: url(../img/file-alt.svg);
-    display: inline-block;
-    width: 30px;
-    padding: 5px 7.5px;
-    margin-right: 1em;
-    background-color: red;
-    border-radius: 5px;
-}*/
-
 .card-text{
     font-size: .75em;
+}
+
+
+/* ---- Collapsable aside --*/
+
+.aside-collapse{
+    max-width: 250px;
+    margin: 25px 0 0 25px;
+    background-color: #F6F5FA;
+    border-radius: 5px;
+    position: relative;
+}
+
+.collapse-btn{
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.collapse-btn a{
+    padding-left: 25px;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+.collapse-arrow{
+    width: 7px;
+}
+
+.collapse-btn a::before{
+    content: url(../img/icon-separador.svg);
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.collapse-arrow.down{
+    animation-name: arrowdown;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+    @keyframes arrowdown{
+        from{
+            transform: rotate(0);
+        }
+        to{
+            transform: rotate(90deg);
+        }
+    }
+
+.collapse-pane{
+    padding: 10px 0;
+}
+
+.collapse-item{
+    padding: 10px 0;
+    position: relative;
+}
+
+.collapse-item a{
+    padding-left: 35px;
+    font-size: .8em;
+}
+
+.collapse-item::after{
+    /*-- static data --*/
+    content: "2";
+    display: inline;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 20px;
+    font-size: .8em;
+    text-align: center;
+    color: #ffffff;
+    background-color: #FE533B;
+    border-radius: 5px;
 }
 
 /*------- Responsive ------- */
@@ -284,15 +345,17 @@ a{
 
 @media only screen and (min-width: 768px){
     
-    .main-content,
-    .cards-section{
-        height: 100vh;
-    }
+    
 }
 
 
 /*-- Only desktop (and big tablets landscape) --*/
 
 @media only screen and (min-width: 1200px){
+    
+    .main-content,
+    .cards-section{
+        height: 100vh;
+    }
     
 }
