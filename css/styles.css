@@ -12,6 +12,7 @@
 
 *{
     box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -84,9 +85,22 @@ a{
 }
 
 .sidebar-col:hover{
-    font-size: 1.4em;
-    background-color: #FE533B;
+    animation-name: sidebarHover;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
 }
+
+    @keyframes sidebarHover{
+
+        from 0%{
+            font-size: 1.2em;
+        }
+        to{
+            font-size: 1.25em;
+            background-color: #FE533B;
+        }
+
+    }
 
 .top-tab{
     height: 60px;
@@ -96,22 +110,6 @@ a{
     border-radius: 5px;
 }
 
-.top-tab:hover{
-    background-color: #FF3A1F;
-}
-
-/*.top-tab:active{
-    border-bottom: 5px solid blue;
-}
-
-.top-tab:visited{
-    border-bottom: 5px solid blue;
-}
-
-.top-tab.active{
-    border-bottom: 5px solid blue;
-}*/
-
 .top-tab a{
     font-size: 1em;
     line-height: 1em;
@@ -119,10 +117,6 @@ a{
     text-align: left;
     padding-left: 25px;
     position: relative;
-}
-
-.top-tab:hover a{
-    color: white !important;
 }
 
 .top-tab a::before{
@@ -151,6 +145,16 @@ a{
     top: 5px !important;
 }
 
+/*------ Hover state ---- */
+
+.top-tab:hover{
+    background-color: #FF3A1F;
+}
+
+.top-tab:hover a{
+    color: white !important;
+}
+
 .top-tab.informe:hover a::before{
     content: url(../img/file-negative.svg);
 }
@@ -166,6 +170,35 @@ a{
 .top-tab.material:hover a::before{
     content: url(../img/book-alt-negative.svg);
 }
+
+/*----- Active state ------ */
+
+
+.top-tab.active{
+    background-color: #FF3A1F;
+}
+
+.top-tab.active a{
+    color: white !important;
+}
+
+.top-tab.informe.active a::before{
+    content: url(../img/file-negative.svg);
+}
+
+.top-tab.carbono.active a::before{
+    content: url(../img/leaf-negative.svg);
+}
+
+.top-tab.plan.active a::before{
+    content: url(../img/user-light-negative.svg);
+}
+
+.top-tab.material.active a::before{
+    content: url(../img/book-alt-negative.svg);
+}
+
+/*-------- Cards section ------ */
 
 .cards-section{
     padding: 10px;
@@ -213,7 +246,6 @@ a{
     font-size: .75em;
 }
 
-
 /* ---- Collapsable aside --*/
     
 aside .row{
@@ -225,6 +257,10 @@ aside .row{
     background-color: #F6F5FA;
     border-radius: 5px;
     position: relative;
+}
+
+.aside-collapse.open{
+    border-left: 3px solid #FF3A1F;
 }
 
 .collapse-btn{
@@ -330,6 +366,10 @@ aside .row{
     .top-tab{
         margin-top: 20px !important;
         justify-content: center;
+    }
+    
+    .top-tab a::before{
+        top: 5px !important;
     }
     
 }
