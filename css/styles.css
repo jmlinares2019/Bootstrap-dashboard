@@ -1,14 +1,4 @@
-/*div, header, ul, li, a{
-    border: 1px solid;
-}
-
-.row{
-    border: 1px solid blue;
-}
-
-.col{
-    border: 1px solid red;
-}*/
+/* ----- General styles ------ */
 
 *{
     box-sizing: border-box;
@@ -57,9 +47,13 @@ a{
     border-right: 2px solid #ffffff;
 }
 
+/* ---- Content ---- */
+
 #content{
     max-width: 1366px;
 }
+
+/* ---- Left sidebar ----*/
 
 .sidebar-left{
     color: #ffffff;
@@ -101,6 +95,8 @@ a{
         }
 
     }
+
+/* ----- Top tabs navbar ----- */
 
 .top-tab{
     height: 60px;
@@ -172,7 +168,6 @@ a{
 }
 
 /*----- Active state ------ */
-
 
 .top-tab.active{
     background-color: #FF3A1F;
@@ -346,7 +341,7 @@ aside .collapsables{
     padding-left: 5px;
 }
 
-/*------- Responsive ------- */
+/*======= Responsive ======= */
 
 /*------ Only mobile -------*/
 
@@ -374,6 +369,8 @@ aside .collapsables{
         padding-bottom: 40px;
     }
     
+    /*----- Top-tabs navbar ----*/
+    
     #top-tabs-navbar{
         margin-right: 1rem;
     }
@@ -393,10 +390,13 @@ aside .collapsables{
 
 @media only screen and (min-width: 576px){
     
+    /*---- Navbar -----*/
+    
     .sygris-navbar{
         height: 40px;
     }
     
+    /*----- Top-tabs navbar ----*/
     
     #top-tabs-navbar{
         padding-left: 10px !important;
@@ -424,10 +424,11 @@ aside .collapsables{
         margin-top: 40px;
     }
     
-    
 }
 
 @media only screen and (max-width: 991px){
+    
+    /*----- Top-tabs navbar ----*/
     
     #top-tabs-navbar{
         padding-top: 20px;
@@ -445,26 +446,23 @@ aside .collapsables{
     }
 }
 
-/*----- Mobile + small tablet landscape ----- */
-
-@media only screen and (max-width: 1199px){
-    
-}
-
 /*-------- Small tablet landscape ------- */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){
     
+    /* ----- Cards section ---*/
+    
     .card{
         min-height: 205px;
     }
-    
     
 }
 
 /*--------- All (and only) tablets ------ */
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
+    
+    /*----- Right aside ----- */
     
     .aside-collapse{
         max-width: 40%;
@@ -485,10 +483,7 @@ aside .collapsables{
 
 /*--------- Tablet + desktop --------*/
 
-@media only screen and (min-width: 768px){
-    
-    
-}
+    /*----- Right aside ----- */
 
 @media only screen and (min-width: 992px){
     
@@ -496,7 +491,7 @@ aside .collapsables{
         max-width: 250px;
     }
     
-        .support-btn-row{
+    .support-btn-row{
         margin-bottom: 40px;
     }
     
