@@ -246,9 +246,9 @@ a{
     font-size: .75em;
 }
 
-/* ---- Collapsable aside --*/
+/* ---- Right aside --*/
     
-aside .row{
+aside .collapsables{
     margin-right: 2em;
 }
 
@@ -331,6 +331,21 @@ aside .row{
     border-radius: 5px;
 }
 
+.support-btn{
+    text-align: center;
+}
+
+.support-btn .btn{
+    min-width: 135px;
+    height: 45px;
+    font-size: .9em;
+    border-radius: 50px;
+}
+
+.support-btn .btn a{
+    padding-left: 5px;
+}
+
 /*------- Responsive ------- */
 
 /*------ Only mobile -------*/
@@ -390,9 +405,6 @@ aside .row{
     .col-md-2.top-tab{
         max-width: 150px;
     }
-    
-    /*---- Collapsable aside ---- */
-    
 
 }
 
@@ -406,6 +418,13 @@ aside .row{
         font-size: 1.8em;
     }
     
+    /*----- Right Aside -----*/
+    
+    .support-btn{
+        margin-top: 40px;
+    }
+    
+    
 }
 
 @media only screen and (max-width: 991px){
@@ -418,7 +437,7 @@ aside .row{
         margin-bottom: 20px !important;
     }
     
-    /*----- Collapsable aside ----- */
+    /*----- Right aside ----- */
     
     aside{
         padding-left: 25px !important;
@@ -450,6 +469,14 @@ aside .row{
     .aside-collapse{
         max-width: 40%;
     }
+    
+    .support-btn-row{
+        margin-right: 4.5em;
+    }
+    
+    .support-btn{
+        text-align: right;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px){
@@ -467,6 +494,10 @@ aside .row{
     
     .aside-collapse{
         max-width: 250px;
+    }
+    
+        .support-btn-row{
+        margin-bottom: 40px;
     }
     
 }
@@ -487,10 +518,10 @@ aside .row{
         min-height: 175px;
     }
     
-    /*----- Collapsable aside ----- */
+    /*----- Right aside ----- */
     
     .collapse-item a{
         padding-left: 35px;
     }
-    
+
 }
